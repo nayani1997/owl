@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="plugin/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="plugin/assets/owl.theme.default.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+      <h1>Watch <span id="movies">1000</span>+ Movies for Free</h1>
+    </div>
+    <div class="owl-carousel owl-theme">
+      <div class="item"><img src="images/img01.png" alt="error" /></div>
+      <div class="item"><img src="images/img02.png" alt="error" /></div>
+      <div class="item"><img src="images/img03.png" alt="error" /></div>
+      <div class="item"><img src="images/img04.png" alt="error" /></div>
+      <div class="item"><img src="images/img05.png" alt="error" /></div>
+      <div class="item"><img src="images/img06.png" alt="error" /></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="countMe/countMe.min.js"></script>
+    <script src="plugin/owl.carousel.min.js"></script>
+    <script>
+      AOS.init();
+      $("#movies").countMe(0, 0);
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
